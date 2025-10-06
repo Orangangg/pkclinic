@@ -29,3 +29,25 @@
   pointer-events: auto;
   position: relative; /* Возвращаем нормальное позиционирование */
 }
+
+
+
+/*убираем скроллбар */ 
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/*Код для аккордеонов */ 
+
+@media (min-width: 961px) {
+.t668 .t-container {
+    max-width: calc(100% - 20px);
+}
+.t668 .t-col {
+    max-width: calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+}
