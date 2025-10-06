@@ -51,3 +51,46 @@
     padding: 0;
 }
 }
+
+
+/*Прелоадер */ 
+
+  #preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    padding: 0 10px; /* чтобы не был по краям на мелких экранах */
+    box-sizing: border-box;
+  }
+
+  #preloader img {
+    width: 150px;
+    height: 100px;
+    animation: pulse 2s ease-in-out infinite;
+    max-width: 80vw; /* подгонка под небольшие экраны */
+    max-height: 80vw;
+    object-fit: contain;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+  }
+
+  #preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Уточнение для маленьких экранов по вертикали: логотип строго по центру */
+  @media (max-width: 600px) {
+    #preloader {
+      padding: 0 20px;
+    }
+  }
