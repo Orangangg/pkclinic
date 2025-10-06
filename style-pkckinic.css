@@ -1,3 +1,4 @@
+/* ==== Табы ==== */
 .tab-1, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7, .tab-8 {
   cursor: pointer;
   color: #BDC3D4;
@@ -6,28 +7,33 @@
   user-select: none;
   transition: color 0.3s ease;
 }
+
 .tab-1.active, .tab-2.active, .tab-3.active,
-.tab-4.active, .tab-5.active, .tab-6.active, .tab-7.active, .tab-8.active {
+.tab-4.active, .tab-5.active, .tab-6.active,
+.tab-7.active, .tab-8.active {
   color: #7B88A9;
   border-bottom: 1px solid #7B88A9;
 }
 
-/* Скрываем блоки через opacity и visibility */
+/* ==== Контейнеры ZeroBlock ==== */
 .zero-block-tab {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.1s ease;
-  position: absolute; /* Не занимают место, если надо, убрать position */
-  top: 0; left: 0; right: 0;
-  height: auto; /* зафиксировать, если прыгает */
+  overflow: hidden;
+  max-height: 0; /* убираем из потока, но без absolute */
+  transform: translateZ(0); /* GPU-композитинг */
+  will-change: opacity, transform;
+  transition: opacity 0.25s ease, max-height 0.25s ease;
 }
 
+/* ==== Активный таб ==== */
 .zero-block-tab.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  position: relative; /* Возвращаем нормальное позиционирование */
+  max-height: 9999px; /* возвращаем высоту */
+  transition: opacity 0.25s ease, max-height 0.25s ease;
 }
 
 
@@ -51,6 +57,7 @@
     padding: 0;
 }
 }
+
 
 
 
