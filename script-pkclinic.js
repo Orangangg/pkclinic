@@ -1,2 +1,53 @@
-document.addEventListener("DOMContentLoaded",function(){"use strict";const e="#rec1193657746",t=-10,a={"tab-1":["#rec1395192641","#rec1395192651","#rec1395192661","#rec1395192671","#rec1395192681","#rec1395380101","#rec1395192701","#rec1395192711","#rec1395192721"],"tab-2":["#rec1395192731","#rec1395192741","#rec1395192751","#rec1395192761","#rec1395192771","#rec1395386561","#rec1395192791","#rec1395192801","#rec1395192811"],"tab-3":["#rec1395192821","#rec1395192831","#rec1395192841","#rec1395192851","#rec1395192861","#rec1395393881","#rec1395192881","#rec1395192891","#rec1395192901"],"tab-4":["#rec1395192911","#rec1395192921","#rec1395192931","#rec1395192941","#rec1395192951","#rec1395397691","#rec1395192971","#rec1395192981","#rec1395192991"],"tab-5":["#rec1395193001","#rec1395193011","#rec1395193021","#rec1395193031","#rec1395193041","#rec1395411061","#rec1395193061","#rec1395193071","#rec1395193081"],"tab-6":["#rec1395193091","#rec1395193101","#rec1395193111","#rec1395193121","#rec1395193131","#rec1395424061","#rec1395193151","#rec1395193161","#rec1395193171"],"tab-7":["#rec1395193181","#rec1395193191","#rec1395193201","#rec1395193211","#rec1395193221","#rec1395431481","#rec1395193241","#rec1395193251","#rec1395193261"],"tab-8":["#rec1395193271","#rec1395193281","#rec1395193291","#rec1395193301","#rec1395193311","#rec1395435911","#rec1395193331","#rec1395193341","#rec1395193351"]},n=Object.keys(a),i=(e,t=document)=>Array.from(t.querySelectorAll(e));function r(e){if(!e)return null;let t=e.replace(/^#/,"").trim().toLowerCase();return t?/^tab\d+$/.test(t)?t.replace(/^tab(\d+)$/,"tab-$1"):t:null}const o=".tb-tabs-nav";function s(t){const a=document.querySelector(o),n=a?i("."+t,a):[];return n.length?n:i("."+t,document)}function c(t,a){const n=s(t);if(!n.length)return;!function(){n.forEach((e=>e.classList.remove("active")));}(),n.forEach((e=>e.classList.add("active"))),function(){Object.values(a?{}:a);Object.values(a).flat().forEach((e=>{const t=document.querySelector(e);t&&(t.style.display="none")}))}(),(a[t]||[]).forEach((e=>{const t=document.querySelector(e);t&&(t.style.display="block")})),function(e){(e||[]).forEach((e=>{const t=document.querySelector(e);if(t&&"none"!==getComputedStyle(t).display){const e=(t.id||"").replace(/^rec/,"");if(window.t_lazyload_update)try{window.t_lazyload_update()}catch(e){}if(window.t_onFuncLoad){try{window.t_onFuncLoad("t396_init",(()=>{if(window.t396_init&&e)try{window.t396_init(e)}catch(e){}}))}catch(e){}try{window.t_onFuncLoad("t_slds_updateSlider",(()=>{if(window.t_slds_updateSlider&&e)try{window.t_slds_updateSlider(e)}catch(e){}}))}catch(e){}try{window.t_onFuncLoad("t_prod__initGallery",(()=>{if(window.t_prod__initGallery&&e)try{window.t_prod__initGallery(e)}catch(e){}}))}catch(e){}}try{window.dispatchEvent(new Event("resize")),window.dispatchEvent(new Event("scroll"))}catch(e){}}}))}(a[t]),setTimeout((()=>{!function(e){(e||[]).forEach((e=>{const t=document.querySelector(e);t&&"none"!==getComputedStyle(t).display&&function(e){if(!e)return;const t=(e.id||"").replace(/^rec/,"");if(window.t_lazyload_update)try{window.t_lazyload_update()}catch(e){}if(window.t_onFuncLoad){try{window.t_onFuncLoad("t396_init",(()=>{if(window.t396_init&&t)try{window.t396_init(t)}catch(e){}}))}catch(e){}try{window.t_onFuncLoad("t_slds_updateSlider",(()=>{if(window.t_slds_updateSlider&&t)try{window.t_slds_updateSlider(t)}catch(e){}}))}catch(e){}try{window.t_onFuncLoad("t_prod__initGallery",(()=>{if(window.t_prod__initGallery&&t)try{window.t_prod__initGallery(t)}catch(e){}}))}catch(e){}}try{window.dispatchEvent(new Event("resize")),window.dispatchEvent(new Event("scroll"))}catch(e){}}(t)}))}(a[t]);if(a=!1,!(function(t,a=7e3){return new Promise((n=>{const i=Date.now();!function r(){const o=document.querySelector(t);if(o)return n(o);if(Date.now()-i>a)return n(null);requestAnimationFrame(r)}()}))})(e,7e3))return;const r=document.querySelector(e);if(r){const e=r.getBoundingClientRect().top+window.pageYOffset+t;window.scrollTo({top:e,behavior:"smooth"})}}),150),history.replaceState?history.replaceState(null,"","#"+t):location.hash="#"+t}n.forEach((e=>{s(e).forEach((t=>{t.addEventListener("click",(()=>c(e,{doScroll:!0})))}))})),function(){Object.values(a).flat().forEach((e=>{const t=document.querySelector(e);t&&(t.style.display="none")}))}();const l=r(location.hash);l&&s(l).length?c(l,{skipHash:!0,doScroll:!0}):c("tab-1",{skipHash:!0,doScroll:!1}),window.addEventListener("hashchange",(()=>{const e=r(location.hash);e&&a[e]&&c(e,{skipHash:!0,doScroll:!0})}))});
+const tabs = {
+  'tab-1': ['#rec1395673331','#rec1395673341','#rec1395673351','#rec1395673361','#rec1395673371','#rec1395673381','#rec1395673391','#rec1395673401','#rec1395673411'],
+  'tab-2': ['#rec1395673421','#rec1395673431','#rec1395673441','#rec1395673451','#rec1395673461','#rec1395673471','#rec1395673481','#rec1395673491','#rec1395673501'],
+  'tab-3': ['#rec1395673511','#rec1395673521','#rec1395673531','#rec1395673541','#rec1395673551','#rec1395673561','#rec1395673571','#rec1395673591','#rec1395673601'],
+  'tab-4': ['#rec1395673611','#rec1395673621','#rec1395673631','#rec1395673641','#rec1395673651','#rec1395673661','#rec1395673671','#rec1395673681','#rec1395673691'],
+  'tab-5': ['#rec1395673701','#rec1395673711','#rec1395673721','#rec1395673731','#rec1395673741','#rec1395673751','#rec1395673761','#rec1395673771','#rec1395673781'],
+  'tab-6': ['#rec1395673791','#rec1395673801','#rec1395673811','#rec1395673821','#rec1395673831','#rec1395673841','#rec1395673851','#rec1395673861','#rec1395673871'],
+  'tab-7': ['#rec1395673881','#rec1395673891','#rec1395673901','#rec1395673911','#rec1395673921','#rec1395673931','#rec1395673941','#rec1395673951','#rec1395673961'],
+  'tab-8': ['#rec1395673971','#rec1395673981','#rec1395673991','#rec1395674001','#rec1395674021','#rec1395674031','#rec1395674041','#rec1395674051','#rec1395674061']
+};
 
+function hideAllBlocks() {
+  Object.values(tabs).flat().forEach(selector => {
+    const el = document.querySelector(selector);
+    if(el) el.classList.remove('active');
+  });
+}
+
+function showBlocksForTab(tab) {
+  hideAllBlocks();
+  tabs[tab].forEach(selector => {
+    const el = document.querySelector(selector);
+    if(el) el.classList.add('active');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Изначально добавляем класс zero-block-tab ко всем блокам
+  Object.values(tabs).flat().forEach(selector => {
+    const el = document.querySelector(selector);
+    if(el) el.classList.add('zero-block-tab');
+  });
+
+  // Назначаем обработчики на табы
+  document.querySelectorAll('.tab-1, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7, .tab-8').forEach(tabEl => {
+    tabEl.addEventListener('click', event => {
+      event.preventDefault();
+      document.querySelectorAll('.tab-1, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7, .tab-8').forEach(el => {
+        el.classList.remove('active');
+      });
+      tabEl.classList.add('active');
+      const activeTabClass = Array.from(tabEl.classList).find(c => /^tab-[1-8]$/.test(c));
+      if(activeTabClass) showBlocksForTab(activeTabClass);
+    });
+  });
+
+  // Показываем первый таб сразу
+  const firstTab = document.querySelector('.tab-1');
+  if(firstTab) {
+    firstTab.classList.add('active');
+    showBlocksForTab('tab-1');
+  }
+});
