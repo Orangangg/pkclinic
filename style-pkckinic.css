@@ -1,2 +1,31 @@
-.tb-tabs-nav .tab-1,.tb-tabs-nav .tab-2,.tb-tabs-nav .tab-3,.tb-tabs-nav .tab-4,.tb-tabs-nav .tab-5,.tb-tabs-nav .tab-6,.tb-tabs-nav .tab-7,.tb-tabs-nav .tab-8{cursor:pointer;color:#BDC3D4;display:inline-block;margin-right:10px;font-size:clamp(14px,2vw,18px);line-height:1.35;text-decoration:none}.tb-tabs-nav .tab-1.active,.tb-tabs-nav .tab-2.active,.tb-tabs-nav .tab-3.active,.tb-tabs-nav .tab-4.active,.tb-tabs-nav .tab-5.active,.tb-tabs-nav .tab-6.active,.tb-tabs-nav .tab-7.active,.tb-tabs-nav .tab-8.active{color:#7B88A9;border-bottom:1px solid #7B88A9}:target::before{content:"";display:block;height:80px;margin-top:-80px;visibility:hidden}
+.tab-1, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7, .tab-8 {
+  cursor: pointer;
+  color: #BDC3D4;
+  display: inline-block;
+  margin-right: 10px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.tab-1.active, .tab-2.active, .tab-3.active,
+.tab-4.active, .tab-5.active, .tab-6.active, .tab-7.active, .tab-8.active {
+  color: #7B88A9;
+  border-bottom: 1px solid #7B88A9;
+}
 
+/* Скрываем блоки через opacity и visibility */
+.zero-block-tab {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  position: absolute; /* Не занимают место, если надо, убрать position */
+  top: 0; left: 0; right: 0;
+  height: auto; /* зафиксировать, если прыгает */
+}
+
+.zero-block-tab.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative; /* Возвращаем нормальное позиционирование */
+}
